@@ -2,14 +2,15 @@
 title: Le Wagon - Middleman
 ---
 
+<% today = Date.today.strftime('%A %B %e %Y') %>
 <div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
-  </div>
+
+  <h1><%= today %></h1>
+  <h2>teachers</h2>
+  <ul class="list-inline">
+    <% %w(Peter Dan Thibault Brian Grace Steve Fabien Allen).each do |teacher| %>
+    <li> <%= teacher %> </li>
+    <% end %>
+  </ul>
+  <a href="#" class="btn btn-primary">Click meee!</a>
 </div>
